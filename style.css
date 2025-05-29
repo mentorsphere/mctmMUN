@@ -14,6 +14,7 @@ body {
       justify-content: space-between;
       align-items: center;
       position: relative;
+      z-index: 1001; /* Ensure header is always on top */
     }
   
     .logo img {
@@ -77,6 +78,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
         transition: opacity 0.3s, transform 0.3s;
+        z-index: 9999; /* Ensure nav is above all other content */
       }
       nav.active {
         display: flex;
