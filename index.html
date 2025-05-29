@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="images/main-logo-3.png" alt="Logo"></div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="comittees.html">Committees</a>
+      <a href="secretariat.html">Secretariat</a>
+      <a href="https://drive.google.com/drive/folders/19HYCBFS60owALUoFhPQjUqGyQF6KZ83a?usp=sharing" target="_blank">Background Guides</a>
+      <a href="#" target="_blank">Country Matrix</a>
+    </nav>
+  </header>
+
+
+  <div class="space"></div>
+
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="images/Mctm1.jpg" alt="Image 1">
+    </div>
+    <div class="carousel-slide">
+      <img src="images/Mctm2.jpg" alt="Image 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="images/Mctm3.jpg" alt="Image 3">
+    </div>
+    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+  </div>
+
+  <div class="main-content">
+    <h1 class="title">MCTM MUN</h1> 
+
+    <p class="maintext">Welcome to MCTM MUN 2025
+
+      We are proud to announce the inaugural edition of MCTM Model United Nations (MCTM MUN)! Hosted by MCTM Chidambaram Chettyar Matriculation School, this first-ever MUN conference brings together passionate students from across Chennai to engage in meaningful dialogue, debate global issues, and develop real-world diplomatic skills. Join us for a transformative experience that blends leadership, learning, and collaboration.
+    
+    </p>
+    //brief description about MUN 2025
+    //delegate letter form principal mam - welcome delegates we want you to participarte in the event, signature and all
+    //mission and vision of MCTM 
+
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Automatic slideshow
+    var slides = document.getElementsByClassName("carousel-slide");
+    if (slides.length > 0) {
+        setInterval(function() {
+            plusSlides(1);
+        }, 5000); // Change image every 5 seconds
+    }
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("carousel-slide");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = "0";
+        slides[i].style.display = "none"; // Hide after fade out
+      }
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(() => {
+        slides[slideIndex-1].style.opacity = "1";
+      }, 10);
+    }
+
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
