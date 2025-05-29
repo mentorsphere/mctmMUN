@@ -54,13 +54,12 @@ body {
     }
 
     .maintext{
-      text-align: center;
+      text-align: justify; /* Align text for a more formal look */
       font-size: 18px;
-      line-height: 1.6;
+      line-height: 1.8; /* Increased line height for better readability */
       color: #333;
       margin: 40px;
-    
-    
+      font-family: "Playfair Display", serif; /* Apply a formal font */
     }
 
     @media (max-width: 768px) {
