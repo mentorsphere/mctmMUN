@@ -170,5 +170,15 @@ body {
     }
 }
 
+.timetable-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.timetable-image.day1 {
+    margin-bottom: 20px;
+}
+
 
 
