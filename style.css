@@ -95,6 +95,21 @@ body {
       .hamburger {
         display: flex;
       }
+
+         .letter-to-delegates {
+        background-image: url('images/letterMOBILE.jpg'); /* Image for mobile */
+        background-size: cover;
+    }
+    .letter-to-delegates p,
+    .letter-to-delegates pre {
+        padding: 10px;
+    }
+    .carousel-container {
+      margin: 10px;
+  }
+    li{
+        font-size: 15px;
+    }
     }
     .main-content {
       padding: 40px 20px;
@@ -155,56 +170,35 @@ body {
     border-radius: 8px;
 }
 
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .carousel-container {
-        margin: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-container {
-        margin: 5px;
-    }
-}
-
-/* Letter to Delegates */
 .letter-to-delegates {
-    background-image: url('images/letter.jpg'); /* Placeholder image, replace with actual letter background */
-    background-size: cover;
+    background-image: url('images/letter.jpg');
+    background-size: 100% 100%; /* Stretch image to cover the entire area */
+    background-repeat: no-repeat;
     background-position: center;
-    padding: 20px;
-    border-radius: 8px 8px 0px 0px;
+    padding: 5% 10%; /* Responsive padding */
+    border-radius: 8px;
     color: #333;
-    /* position: relative; */
+    position: relative;
     overflow: hidden;
+    box-sizing: border-box; /* Include padding in element's total width and height */
 }
 
-.letter-to-delegates {
-
+.letter-to-delegates p,
+.letter-to-delegates pre {
+    position: relative;
+    z-index: 2;
     background-color: rgba(255, 255, 255, 0.8);
-    width: fit-content;
     padding: 15px;
+    border-radius: 5px;
+    max-width: 800px; /* Limit width for readability on larger screens */
+    margin: 0 auto; /* Center the text block */
 }
 
-.lettertext {
-  text-align: justify; /* Align text for a more formal look */
-  font-size: 18px;
-  line-height: 1.8; /* Increased line height for better readability */
-  color: #333;
-  margin: 0px;
-  padding: 10px ;
-  font-family: "Playfair Display"; /* Apply a formal font */
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0px;
-}
 
 /* Time Table Images */
 .timetable-image {
     width: 100%;
-    height: auto;
+    height: auto; 
     display: block;
 }
 
