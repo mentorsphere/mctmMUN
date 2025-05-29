@@ -59,7 +59,7 @@ body {
       line-height: 1.8; /* Increased line height for better readability */
       color: #333;
       margin: 40px;
-      font-family: "Playfair Display", serif; /* Apply a formal font */
+      font-family: "Playfair Display"; /* Apply a formal font */
     }
 
     @media (max-width: 768px) {
