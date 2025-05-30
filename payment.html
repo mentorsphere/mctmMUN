@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - MCTM MUN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="images/main-logo-3.png" alt="Logo" width="100%"></div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="comittees.html">Committees</a>
+            <a href="secretariat.html">Secretariat</a>
+            <a href="https://drive.google.com/drive/folders/19HYCBFS60owALUoFhPQjUqGyQF6KZ83a?usp=sharing" target="_blank">Background Guides</a>
+            <a href="#" target="_blank">Country Matrix</a>
+            <a href="payment.html">Payment</a>
+        </nav>
+    </header>
+
+    <div class="space"></div>
+
+    <div class="main-content">
+        <h1>Payment Information</h1>
+        <div class="payment-details">
+            <p>Payment details will be shared through the school’s official communication email ID.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
