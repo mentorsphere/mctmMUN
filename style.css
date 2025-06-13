@@ -1,25 +1,44 @@
 body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      background-image: url('../images/pattern.svg');
+      background-repeat: repeat;
+      background-size: 80px 80px; /* Adjust size as needed for wavy pattern */
+      background-attachment: fixed;
+      animation: movePattern 10s linear infinite;
     }
+
+    @keyframes movePattern {
+      0% {
+        background-position: 0% 0%;
+        background-size: 80px 80px;
+      }
+      50% {
+        background-position: 40px 40px;
+        background-size: 100px 100px;
+      }
+      100% {
+        background-position: 80px 80px;
+        background-size: 80px 80px;
+      }
+    }
+
+
     header {
-      background-color: #092D1F;
+      background-color: #333333 ;
       color: white;
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
+      position: static;
       z-index: 1001; /* Ensure header is always on top */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     }
   
     .logo img {
       width: 50%;
-      padding-top: 7px;
+
       padding-bottom: 7px;
       height: auto;
       display: block;
@@ -31,6 +50,9 @@ body {
     nav a {
       color: white;
       text-decoration: none;
+      font-family: "Times New Roman", Times, serif; /* Formal font */
+      margin-right: 10px;
+      font-size: 17px;
     }
     nav a:hover {
       text-decoration: underline;
@@ -47,12 +69,27 @@ body {
       margin: 4px 0;
     }
 
+    h1, h2, h3 {
+      transition: color 0.5s ease; /* Smooth transition for color change */
+    }
+@keyframes rgbChange {
+      0% { color: #F5E663; } /* Pastel Red */
+      33% { color: #FFAD69; } /* Pastel Green */
+      66% { color: #9C3848; } /* Pastel Blue */
+      100% { color: #F5E663; }
+    }
+    h1:hover,
+    h2:hover,
+    h3:hover {
+      animation: rgbChange 3s ease-in-out infinite;
+    }
     .title {
       font-family: "Playfair Display", serif;
       font-weight: bold;
       font-style: normal;
       text-align: center;
     }
+
 
     .maintext{
       text-align: justify; /* Align text for a more formal look */
@@ -67,7 +104,7 @@ body {
       nav {
         display: none;
         flex-direction: column;
-        background-color: #092D1F;
+        background-color: #333333 ;
         position: absolute;
         top: 100%;
         left: 0;
@@ -133,6 +170,7 @@ body {
       max-width: 800px;
       width: 90%;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px; /* Rounded corners for a softer look */
       flex: 1;
     }
     footer {
@@ -142,12 +180,9 @@ body {
       padding: 20px;
       width: 100%;
       box-sizing: border-box;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     }
-    .space {
-      width: 100%;
-      height: 10vh;
-      background-color: #958A67;
-    }
+  
     .logo {
       width: 100vw;
       padding: -10px;
