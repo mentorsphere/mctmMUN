@@ -1,9 +1,8 @@
 body {
       margin: 0;
       font-family: Arial, sans-serif;
-     
+      background-image: url(images/pattern.svg);
     }
-
     header {
       background-color: rgb(118, 206, 236);
       color: white;
@@ -15,26 +14,22 @@ body {
       z-index: 1001;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-
     .nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
     }
-  
     .logo img {
       width: 50%;
       padding-bottom: 7px;
       height: auto;
       display: block;
     }
-
     .nav-links {
       display: flex;
       gap: 10px;
     }
-
     .nav-links a {
       color: white;
       text-decoration: none;
@@ -42,11 +37,9 @@ body {
       margin-right: 10px;
       font-size: 17px;
     }
-
     .nav-links a:hover {
       text-decoration: underline;
     }
-
     .hamburger {
       display: none;
       flex-direction: column;
@@ -57,8 +50,7 @@ body {
       width: 25px;
       background-color: white;
       margin: 4px 0;
-    }
-
+    }s
     h1, h2, h3 {
       transition: color 0.5s ease; /* Smooth transition for color change */
     }
@@ -79,9 +71,7 @@ body {
       font-style: normal;
       text-align: center;
     }
-
-
-    .maintext{
+     .maintext{
       text-align: justify; /* Align text for a more formal look */
       font-size: 18px;
       line-height: 1.8; /* Increased line height for better readability */
@@ -89,7 +79,6 @@ body {
       margin: 40px;
       font-family: "Playfair Display"; /* Apply a formal font */
     }
-
     @media (max-width: 768px) {
       .nav-header {
         width: 100%;
@@ -127,8 +116,7 @@ body {
       header {
         flex-wrap: wrap;
       }
-
-         .letter-to-delegates {
+      .letter-to-delegates {
         background-image: url('images/letterMOBILE.jpg'); /* Image for mobile */
         background-size: cover;
     }
@@ -136,12 +124,10 @@ body {
     .letter-to-delegates pre {
         padding: 10px;
     }
-
     li{
         font-size: 15px;
     }
     }
-
 .payment-details {
     background-color: #f9f9f9;
     padding: 20px;
@@ -150,7 +136,6 @@ body {
     margin-top: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .payment-details p {
     font-size: 1.1em;
     color: #555;
@@ -174,8 +159,7 @@ body {
       width: 100%;
       box-sizing: border-box;
       box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    }
-  
+    } 
     .logo img {
       width: 80%; /* Adjust logo size for mobile */
     }
@@ -195,10 +179,6 @@ body {
       width: 100%; /* Ensure timetable images are responsive */
       height: auto;
     }
-
-
-
-
 .main-image {
     width: 100%;
     height: auto;
@@ -206,7 +186,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .letter-to-delegates {
     background-image: url('images/letter.jpg');
     background-size: 100% 100%; /* Stretch image to cover the entire area */
@@ -219,7 +198,6 @@ body {
     overflow: hidden;
     box-sizing: border-box; /* Include padding in element's total width and height */
 }
-
 .letter-to-delegates p,
 .letter-to-delegates pre {
     position: relative;
@@ -230,8 +208,6 @@ body {
     max-width: 800px; /* Limit width for readability on larger screens */
     margin: 0 auto; /* Center the text block */
 }
-
-
 /* Time Table Images */
 .timetable-image {
     width: 100%;
@@ -242,6 +218,3 @@ body {
 .timetable-image.day1 {
     margin-bottom: 20px;
 }
-
-
-
