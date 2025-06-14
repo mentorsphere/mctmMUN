@@ -3,60 +3,57 @@ body {
       font-family: Arial, sans-serif;
       background-image: url('../images/pattern.svg');
       background-repeat: repeat;
-      background-size: 80px 80px; /* Adjust size as needed for wavy pattern */
-      background-attachment: fixed;
-      animation: movePattern 10s linear infinite;
+      background-size: 80px 80px;
+      background-attachment: scroll;
+      animation: none;
     }
 
-    @keyframes movePattern {
-      0% {
-        background-position: 0% 0%;
-        background-size: 80px 80px;
-      }
-      50% {
-        background-position: 40px 40px;
-        background-size: 100px 100px;
-      }
-      100% {
-        background-position: 80px 80px;
-        background-size: 80px 80px;
-      }
-    }
+
 
 
     header {
-      background-color: #333333 ;
+      background-color: #333333;
       color: white;
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: static;
-      z-index: 1001; /* Ensure header is always on top */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      z-index: 1001;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
     }
   
     .logo img {
       width: 50%;
-
       padding-bottom: 7px;
       height: auto;
       display: block;
     }
-    nav {
+
+    .nav-links {
       display: flex;
       gap: 10px;
     }
-    nav a {
+
+    .nav-links a {
       color: white;
       text-decoration: none;
-      font-family: "Times New Roman", Times, serif; /* Formal font */
+      font-family: "Times New Roman", Times, serif;
       margin-right: 10px;
       font-size: 17px;
     }
-    nav a:hover {
+
+    .nav-links a:hover {
       text-decoration: underline;
     }
+
     .hamburger {
       display: none;
       flex-direction: column;
@@ -101,34 +98,41 @@ body {
     }
 
     @media (max-width: 768px) {
-      nav {
+      .nav-header {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .nav-links {
         max-height: 0;
         overflow: hidden;
         flex-direction: column;
-        background-color: #333333 ;
+        background-color: #333333;
         position: absolute;
-        top: 100%;
+        top: 60px; /* Adjust based on header height */
         left: 0;
         right: 0;
         width: 100%;
         padding: 0;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: max-height 0.3s ease-out, overflow 0.3s ease-out;
-        z-index: 9999; /* Ensure nav is above all other content */
+        z-index: 9999;
       }
-      nav.active {
+      .nav-links.active {
         max-height: 500px; /* Adjust as needed to fit all content */
         overflow: visible;
       }
-      nav a {
+      .nav-links a {
         padding: 15px 20px;
         border-bottom: 1px solid rgba(255,255,255,0.1);
       }
-      nav a:last-child {
+      .nav-links a:last-child {
         border-bottom: none;
       }
       .hamburger {
         display: flex;
+      }
+      header {
+        flex-wrap: wrap;
       }
 
          .letter-to-delegates {
@@ -139,9 +143,7 @@ body {
     .letter-to-delegates pre {
         padding: 10px;
     }
-    .carousel-container {
-      margin: 10px;
-  }
+
     li{
         font-size: 15px;
     }
@@ -181,40 +183,36 @@ body {
       box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     }
   
-    .logo {
-      width: 100vw;
-      padding: -10px;
-      margin: -10px;
+    .logo img {
+      width: 80%; /* Adjust logo size for mobile */
     }
     .main-content {
-      width: 90vw;
+      width: 95%; /* Increase main content width for mobile */
+      padding: 20px 10px; /* Adjust padding for mobile */
+      margin: 10px auto; /* Adjust margin for mobile */
+    }
+    .maintext {
+      font-size: 16px; /* Smaller font size for mobile */
+      margin: 20px; /* Adjust margin for mobile */
+    }
+    h1, h2, h3 {
+      font-size: 1.5em; /* Adjust heading sizes for mobile */
+    }
+    .timetable-image {
+      width: 100%; /* Ensure timetable images are responsive */
+      height: auto;
     }
 
 
 
 
-/* Carousel Styles */
-.carousel-container { 
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-slide {
-    width: 100%;
-    transition: opacity 1s ease-in-out; 
-}
-
-
-
-.carousel-slide img {
+.main-image {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 8px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .letter-to-delegates {
