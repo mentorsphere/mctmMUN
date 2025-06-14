@@ -114,36 +114,6 @@ Head of the International School</p>
   </div>
 
   <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    // Automatic slideshow
-    var slides = document.getElementsByClassName("carousel-slide");
-    if (slides.length > 0) {
-      setInterval(function () {
-        plusSlides(1);
-      }, 5000); // Change image every 5 seconds
-    }
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("carousel-slide");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = "0";
-        slides[i].style.display = "none"; // Hide after fade out
-      }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(() => {
-        slides[slideIndex - 1].style.opacity = "1";
-      }, 10);
-    }
-
     function toggleMenu() {
       const nav = document.getElementById('nav-menu');
       nav.classList.toggle('active');
