@@ -206,7 +206,6 @@ body {
 }
 
 .carousel-slide {
-    display: none;
     width: 100%;
     transition: opacity 1s ease-in-out; 
 }
