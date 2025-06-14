@@ -4,11 +4,8 @@ body {
      
     }
 
-
-
-
     header {
-      background-color: #333333;
+      background-color: rgb(118, 206, 236);
       color: white;
       padding: 10px 20px;
       display: flex;
